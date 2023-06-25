@@ -1,2 +1,18 @@
-# 主流模型
+# 主流平台
+
+### OpenAI
+
+
+
+### Azure OpenAI
+
+
+
+### Claude
+
+
+
+### Google PaLM
+
+
 
