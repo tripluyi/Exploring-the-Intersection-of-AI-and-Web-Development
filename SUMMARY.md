@@ -5,7 +5,10 @@
 ## Before Start
 
 * [主流平台](before-start/zhu-liu-mo-xing.md)
-* [名词概念](before-start/ming-ci-gai-nian.md)
+* [名词概念](before-start/ming-ci-gai-nian/README.md)
+  * [Token](before-start/ming-ci-gai-nian/token.md)
+  * [Prompt](before-start/ming-ci-gai-nian/prompt.md)
+  * [Embeddings & Vector](before-start/ming-ci-gai-nian/embeddings-and-vector.md)
 
 ## Practice
 
