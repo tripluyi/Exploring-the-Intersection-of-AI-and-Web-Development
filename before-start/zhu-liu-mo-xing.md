@@ -34,19 +34,19 @@ API申请地址：[https://www.anthropic.com/earlyaccess](https://www.anthropic.
 
 优点：免费，并且有100k 接口
 
-确定：目前申请需要等待较长时间
+缺点：目前申请需要等待时间较长
 
 
 
 ### Google PaLM
 
-提供了广泛的AI模型和算法，包括TensorFlow、机器学习、语音识别等。主打点是易用性高,可以快速上手。
+提供了广泛的AI模型和算法，包括TensorFlow、机器学习、语音识别等。主打点是易用性高，可以快速上手。
 
 API申请地址：[https://makersuite.google.com/](https://makersuite.google.com/)
 
-优点：免费
+优点：免费，不会封号
 
-确定：不支持中文
+缺点：不支持中文，访问稍有不便
 
 Google也同样拥有自己的在线chat平台，[Bard](https://bard.google.com/)，但同样也不支持中文。
 
