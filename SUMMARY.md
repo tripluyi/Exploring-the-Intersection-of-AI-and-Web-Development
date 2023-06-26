@@ -8,7 +8,10 @@
 * [名词概念](before-start/ming-ci-gai-nian/README.md)
   * [Token](before-start/ming-ci-gai-nian/token.md)
   * [Prompt](before-start/ming-ci-gai-nian/prompt.md)
+  * [Temperature](before-start/ming-ci-gai-nian/temperature.md)
+  * [top\_p](before-start/ming-ci-gai-nian/top\_p.md)
   * [Embeddings & Vector](before-start/ming-ci-gai-nian/embeddings-and-vector.md)
+  * [CoT](before-start/ming-ci-gai-nian/cot.md)
 
 ## Practice
 
