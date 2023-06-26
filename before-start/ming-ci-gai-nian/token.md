@@ -21,11 +21,11 @@ Token（令牌）通常指的是文本中的基本单位，可以是单词、数
 
 
 
-一个有趣的例子
+### 一个有趣的例子
 
 询问GPT将一个单词以相反的顺序返回，看似简单，但GPT两次都回答错了。
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 这里的原因是GPT是通过Token来读取文本的，在GPT官方[Tokenizer页面](https://platform.openai.com/tokenizer)上，我们可以清楚地看到，lollipop这个单词被分割成了3个Token，Token ID分别是 \[75, 692, 42800]，所以它实际无法正确地处理这个字符串反转的操作。
 

@@ -4,7 +4,7 @@
 
 
 
-#### 引入 openai
+### 引入 openai
 
 在这个例子中，我们使用OpenAI来实现。Azure OpenAI的使用方式类似
 
@@ -14,7 +14,7 @@ import { Configuration, OpenAIApi } from 'openai'
 
 
 
-#### 新建配置
+### 新建配置
 
 你需要在OpenAI获取到API Key以及 Organization，并且将他们存储在环境变量。\
 之后新建一个OpenAI的配置
@@ -29,7 +29,7 @@ const openai = new OpenAIApi(configuration)
 
 
 
-#### 发起一次提问
+### 发起一次提问
 
 这里使用的是Completion，它的实际作用是根据给定的输入生成一个自然语言的输出，而不是进行对话。Completion应用通常需要一个能够自动完成某种任务的系统，例如自动文本摘要、机器翻译或文本自动生成。Completion系统需要能够理解输入的上下文，并能够生成合适的输出。
 
@@ -69,7 +69,7 @@ export const QuetstionToOpenAI = async ({
 
 
 
-#### 发起一次对话
+### 发起一次对话
 
 Chat的作用是实现人机对话，一般是为了解决用户的问题或提供信息。Chat应用通常需要一个能够理解和回答自然语言问题的系统，例如聊天机器人。Chat系统需要能够处理大量的自然语言输入，并能够以自然且流畅的方式与用户进行交互。
 
@@ -118,7 +118,7 @@ export const chatWithOpenAI = async ({
 }
 ```
 
-Chat模式和Completion一般根据场景的不同来区别使用。
+#### Chat模式和Completion一般根据场景的不同来区别使用。
 
 在这里Chat例子中，实际是通过给定一段限定的文本(content)，让 AI 在此文本的范围内回答用户的提问。
 
