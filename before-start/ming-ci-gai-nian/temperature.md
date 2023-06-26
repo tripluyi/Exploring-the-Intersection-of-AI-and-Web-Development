@@ -8,10 +8,15 @@
 
 
 
+一个更直观的解释，Temperature, “温度”，顾名思义，好比煮沸的一锅水，温度越高，就会有越多的水滴溅出锅，温度越低能溅出出锅就那么几个水滴。
+
+也就是说Temperature 这个参数越高就拉平模型预测在词表上的概率分布，这样在解码时结合采样策略会采样到不同的Token。
+
 
 
 {% hint style="info" %}
-Reference:\
-[https://huggingface.co/blog/how-to-generate](https://huggingface.co/blog/how-to-generate)
+Reference:
+
+[Google Generative AI learning Path - Encoder-Decoder Architecture](https://www.cloudskillsboost.google/course\_templates/543)
 {% endhint %}
 

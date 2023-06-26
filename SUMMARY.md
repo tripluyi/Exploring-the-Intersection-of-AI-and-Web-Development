@@ -9,8 +9,8 @@
   * [Token](before-start/ming-ci-gai-nian/token.md)
   * [Prompt](before-start/ming-ci-gai-nian/prompt.md)
   * [Temperature](before-start/ming-ci-gai-nian/temperature.md)
-  * [top\_p](before-start/ming-ci-gai-nian/top\_p.md)
-  * [Embeddings & Vector](before-start/ming-ci-gai-nian/embeddings-and-vector.md)
+  * [Top\_p](before-start/ming-ci-gai-nian/top\_p.md)
+  * [Vector & Embeddings](before-start/ming-ci-gai-nian/vector-and-embeddings.md)
   * [CoT](before-start/ming-ci-gai-nian/cot.md)
 
 ## Practice
