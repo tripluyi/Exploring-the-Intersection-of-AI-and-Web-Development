@@ -2,17 +2,16 @@
 
 ### 向量和Embeddings的作用
 
-想象一下，现在数据库中有一段文本，内容是“这只老鼠正在寻找食物”。
-
+想象一下，现在数据库中有一段文本，内容是“这只老鼠正在寻找食物”。\
 用户输入一个查询：奶酪
 
-如果我们仅仅是使用文本搜索，将无法识别该段落，它不包含任何相同的文字。
-
-但通过使用embeddings，这两段文字都将转化为向量，然后可以在这两段文字的向量上执行相似性搜索。
-
+如果我们仅仅是使用文本搜索，将无法识别该段落，它不包含任何相同的文字。\
+但通过使用embeddings，这两段文字都将转化为向量，然后可以在这两段文字的向量上执行相似性搜索。\
 由于 “老鼠” 和 "奶酪" 在上下文中存在某种关系，尽管两段文字没有匹配的词语，用户还是能够通过向量间的相似性得出这段文字。
 
-这正说明了向量嵌入的价值 - 它能够 捕捉到上下文之间的关系，而不是只依靠精确匹配。这样就可以超出文字本身，基于更广泛的意义找到相似的内容。
+这正说明了向量嵌入的价值 - 它能够捕捉到上下文之间的关系，而不是只依靠精确匹配。这样就可以超出文字本身，基于更广泛的意义找到相似的内容。
+
+
 
 
 
@@ -54,7 +53,40 @@ _**vector = \[0,-2,...4]**_
 
 ### 向量的相似性
 
+一般我们通过余弦相似性来做向量相似的判断。
 
+余弦相似性通过测量两个向量的夹角的余弦值来度量它们之间的相似性。0度角的余弦值是1，而其他任何角度的余弦值都不大于1；并且其最小值是-1。从而两个向量之间的角度的余弦值确定两个向量是否大致指向相同的方向。两个向量有相同的指向时，余弦相似度的值为1；两个向量夹角为90°时，余弦相似度的值为0；两个向量指向完全相反的方向时，余弦相似度的值为-1。这结果是与向量的长度无关的，仅仅与向量的指向方向相关。余弦相似度通常用于正空间，因此给出的值为0到1之间。
+
+这里是一个余弦相似性的判断方法：
+
+```typescript
+/* 向量相似度对比
+ * 使用示例：
+ *     
+ *    const a: number[] = [1, 2, 3];
+ *    const b: number[] = [4, 5, 6];
+ *    
+ *    const similarity: number = cosineSimilarity(a, b);
+ *    console.log(similarity); // Output: 0.9746318461970762
+ */
+export const cosineSimilarity = (a: number[], b: number[]): number => {
+    if (a.length !== b.length) {
+        throw new Error('Vectors must have same length')
+    }
+
+    let dotProduct = 0
+    let normA = 0
+    let normB = 0
+
+    for (let i = 0; i < a.length; i++) {
+        dotProduct += a[i] * b[i]
+        normA += a[i] * a[i]
+        normB += b[i] * b[i]
+    }
+
+    return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB))
+}
+```
 
 
 
@@ -74,5 +106,7 @@ Reference
 [Vector Embeddings for Developers](https://www.pinecone.io/learn/vector-embeddings-for-developers/)
 
 [What is a Vector Database?](http://localhost:5000/s/aC0LjN8LnoW1EQtmZMbv/about-us/vision-mission-and-focus/vision)
+
+[Cosine Similarity - Wikipedia](https://en.wikipedia.org/wiki/Cosine\_similarity)
 {% endhint %}
 
