@@ -19,7 +19,7 @@
 
 从数学角度来说，向量是一个具有大小和方向的数学构造。例如,我们可以把向量想象成空间中一个点,“方向”就是从(0,0,0)到该点的矢量空间中的一个箭头。
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 从开发人员来看，我们可以更容易地将向量看作包含数值的数组。例如:
 
@@ -29,7 +29,7 @@ _**vector = \[0,-2,...4]**_
 
 当我们查看同一空间中的许多向量时，我们可以说某些向量彼此近在咫尺，而其他向量相距甚远。 一些向量似乎会聚集在一起,而另一些向量可能在空间中分布稀疏。
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -39,7 +39,7 @@ _**vector = \[0,-2,...4]**_
 
 一旦训练完成，嵌入模型可以将我们的原始数据转换为向量embedding。这意味着它知道如何将新的数据点放置在向量空间中。
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 这种embedding使得可以比较单词之间的相似性，且具有逻辑意义 - 如同义词出现在一起，不同义词分开。通过这种方法，嵌入模型学习了数据之间的隐含关系，并将其反映在向量空间之中。这正是保留原始数据含义的关键。
 
@@ -113,7 +113,7 @@ GPT有两种方式学习知识:
 | gpt-4         | 8,192 tokens(\~10 pages)  |
 | gpt-4-32k     | 32,768 tokens(\~40 pages) |
 
-&#x20;继续这个类比，你可以把模型看成一个只能看几页笔记的学生，即使他有整个书架可供选择。
+继续这个类比，你可以把模型看成一个只能看几页笔记的学生，即使他有整个书架可供选择。
 
 因此，要构建一个能够利用大量文本回答问题的系统,我们推荐使用 搜索-问 的方法。
 

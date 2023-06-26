@@ -1,5 +1,5 @@
 ---
-description: Chain of Though
+description: Chain of Thought
 ---
 
 # CoT
