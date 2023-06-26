@@ -94,7 +94,28 @@ export const cosineSimilarity = (a: number[], b: number[]): number => {
 
 Openai CookBook中提到，更推荐使用使用 embeddings。这是因为embeddings具有zero-short的优势。
 
-那么什么是zero-short？
+GPT有两种方式学习知识:
+
+* 通过模型权重（比如：在一个训练数据集上微调模型）
+* 通过模型输入（比如：通过input消息插入一段知识）
+
+尽管微调感觉更自然（毕竟GPT学习其他知识就是通过训练数据）- 但一般不推荐它来教授模型知识。微调更适用于教授专项任务或类似风格，在召回事实知识时可靠性较低。
+
+类比来说，模型权重就像长期记忆。当你微调模型时，就像为了一周后的考试而学习。当快要考试时，模型可能会忘记一些细节，或误记从未读到的事实。
+
+相比之下，消息输入就像短期记忆。当你通过输入来传递知识时，就像带着资料去参加开卷考试。有资料在手，模型更可能得出正确答案。
+
+相对于微调，文本搜索的一个缺点是每个模型都有一个最大文本长度限制：
+
+| 模型            | 最大文本长度                    |
+| ------------- | ------------------------- |
+| gpt-3.5-turbo | 4,096 tokens(\~5 pages)   |
+| gpt-4         | 8,192 tokens(\~10 pages)  |
+| gpt-4-32k     | 32,768 tokens(\~40 pages) |
+
+&#x20;继续这个类比，你可以把模型看成一个只能看几页笔记的学生，即使他有整个书架可供选择。
+
+因此，要构建一个能够利用大量文本回答问题的系统,我们推荐使用 搜索-问 的方法。
 
 
 
@@ -108,5 +129,7 @@ Reference
 [What is a Vector Database?](http://localhost:5000/s/aC0LjN8LnoW1EQtmZMbv/about-us/vision-mission-and-focus/vision)
 
 [Cosine Similarity - Wikipedia](https://en.wikipedia.org/wiki/Cosine\_similarity)
+
+[Question answering using embeddings - OpenAI Cookbook](https://github.com/openai/openai-cookbook/blob/main/examples/Question\_answering\_using\_embeddings.ipynb)
 {% endhint %}
 
