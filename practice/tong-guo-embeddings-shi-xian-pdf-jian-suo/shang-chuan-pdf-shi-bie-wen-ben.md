@@ -190,5 +190,9 @@ const getLongContentFromPage = (pageContentCollection: PageContentCollection) =>
 ```
 {% endcode %}
 
-至此，我们获取到了整个PDF文档的所有文本内容，并且通过 pageCallback 存入当前的状态中供后续使用。
+至此，我们获取到了整个PDF文档的所有文本内容，并且通过 pageCallback 存入当前的状态中供后续使用。这里我们获得了3个字段：
+
+* longContextList - 以页面纬度，按照PDF上展示的位置保存每一行的内容
+* flattenSentenceList - 将整个PDF上所有的整句作为分割条件，存储成数组
+* longParagraph - 将所有的整句都拼凑在一起
 
