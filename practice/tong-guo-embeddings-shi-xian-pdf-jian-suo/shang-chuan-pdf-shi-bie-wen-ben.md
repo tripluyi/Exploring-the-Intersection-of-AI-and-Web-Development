@@ -6,9 +6,9 @@
 
 <details>
 
-<summary>一个基于NextJS路由的pdfworker.js下载方法</summary>
+<summary>一个基于NextJS路由的pdfworker下载方法</summary>
 
-{% code title="pdf.worker.js" fullWidth="false" %}
+{% code title="api/pdf.worker" fullWidth="false" %}
 ```typescript
 import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs'
@@ -18,11 +18,9 @@ import { findSpecificDir } from '@/utils/serverUtil'
 const PdfWorker = async (req: NextApiRequest, res: NextApiResponse) => {
     const rootDir = await findSpecificDir({ startPath: __dirname, specificFile: 'package.json' })
     const pdfworkerjs = path.resolve(rootDir, './node_modules/pdfjs-dist/build/pdf.worker.js')
-    console.log(`pdfworkerjs`, pdfworkerjs)
-    console.log(`this is /pdf.worker.js`)
+
     fs.readFile(pdfworkerjs, (err, data) => {
         if (err) {
-            console.log(`fs error`, err)
             res.setHeader('Content-Type', 'text/plain')
             res.status(404)
             res.end('404 Not Found\n')
@@ -88,7 +86,6 @@ const PdfReader = ({
             if (tempCollection.length >= numPages && numPages > 0) {
                 // page Load Success
                 const longContentBlock = getLongContentFromPage(tempCollection)
-                console.log(`longContent`, longContentBlock)
                 const { longParagraph } = longContentBlock
                 if (longParagraph && typeof pageCallback == `function`) {
                     pageCallback(longParagraph)
@@ -120,5 +117,78 @@ const PdfReader = ({
 ```
 {% endcode %}
 
+这里客户端的PDF view渲染的时候，每一页渲染都会触发 Page.onLoadSuccess。需要在这里收集每一页的内容整理之后处理。\
+页面上的文本内容在 page.getTextContent()中，实际上我们获得的是一个PDF上每个文字的点位transform，我们通过这个字段来判断文字是否在同一行，并且将它们收集在一起处理。\
 
+
+处理方法：
+
+{% code title="客户端" %}
+```typescript
+const getLongContentFromPage = (pageContentCollection: PageContentCollection) => {
+    const endRegs = /[\.\!！。]/
+    let longContextList: Array<LONG_CONTEXT_TYPE> = []
+    _.map(pageContentCollection, pageContent => {
+        const { page, contentList } = pageContent || {}
+        let longContext: LONG_CONTEXT_TYPE = {
+            page,
+            textlines: [],
+        }
+        let thisLine = '',
+            lastTransformString = ''
+        _.map(contentList, (content, contentIndex: number) => {
+            const { transform, str } = content || {}
+            const sameLineTrans = transform
+                .slice(0, 4)
+                .concat([transform[transform.length - 1]])
+                .join(',')
+            if (!lastTransformString || sameLineTrans == lastTransformString) {
+                thisLine += str
+                if (contentIndex == contentList.length - 1) {
+                    longContext.textlines.push(thisLine)
+                }
+            } else {
+                longContext.textlines.push(thisLine)
+                thisLine = str
+            }
+            lastTransformString = sameLineTrans
+        })
+
+        longContextList.push({
+            ...longContext,
+        })
+    })
+
+    // sort by page number
+    longContextList = _.sortBy(longContextList, ['page'])
+
+    // get sentence list
+    let sentence = '',
+        longParagraph = '',
+        flattenSentenceList: any = []
+    _.map(longContextList, longContext => {
+        const { textlines, page } = longContext || {}
+        _.map(textlines, (textline, lineIndex) => {
+            const is_end_index = textline.match(endRegs)?.index || -1
+            if (is_end_index >= 0) {
+                // TODO 根据段落来分隔更好
+                const endSentence = sentence + textline.slice(0, is_end_index + 1)
+                flattenSentenceList.push({
+                    sentence: endSentence,
+                })
+                longParagraph += `\n${endSentence}`
+                sentence = textline.slice(is_end_index + 1)
+            } else {
+                sentence += textline
+            }
+        })
+    })
+
+    console.log(`flattenSentenceList`, flattenSentenceList)
+    return { longContextList, flattenSentenceList, longParagraph }
+}
+```
+{% endcode %}
+
+至此，我们获取到了整个PDF文档的所有文本内容，并且通过 pageCallback 存入当前的状态中供后续使用。
 

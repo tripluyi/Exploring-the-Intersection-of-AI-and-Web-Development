@@ -1,6 +1,6 @@
 # 通过Embeddings实现PDF检索
 
-先来看一段实现，
+先来看一段 Demo，
 
 {% tabs %}
 {% tab title="From Bilibili" %}
@@ -18,7 +18,9 @@ PDF Embeddings Search
 
 这段视频实现的功能是，使用 Openai API，基于用户上传的PDF来回答回答，并且回答的内容范围限定在此PDF。
 
-简单的思路是，
+
+
+基本步骤：
 
 1. 上传PDF，并识别文本
 2. 分割PDF为多个Documents
@@ -29,13 +31,6 @@ PDF Embeddings Search
 7. 再次将获取到的最有关联性的Document内容以及用户的提问一起丢给 Openai
 8. 得到 Openai 的回答
 
+
+
 下面我们来一步步实现
-
-
-
-
-
-
-
-
-
