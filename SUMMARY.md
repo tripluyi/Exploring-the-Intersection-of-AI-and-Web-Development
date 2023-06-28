@@ -17,6 +17,8 @@
 
 * [发起一次提问和对话](practice/fa-qi-yi-ci-ti-wen-he-dui-hua.md)
 * [通过Embeddings实现PDF检索](practice/tong-guo-embeddings-shi-xian-pdf-jian-suo/README.md)
-  * [上传PDF, 识别文本](practice/tong-guo-embeddings-shi-xian-pdf-jian-suo/shang-chuan-pdf-shi-bie-wen-ben.md)
+  * [上传识别PDF](practice/tong-guo-embeddings-shi-xian-pdf-jian-suo/shang-chuan-shi-bie-pdf.md)
+  * [获取文本，分割Documents](practice/tong-guo-embeddings-shi-xian-pdf-jian-suo/huo-qu-wen-ben-fen-ge-documents.md)
+  * [Openai Embeddings 向量化](practice/tong-guo-embeddings-shi-xian-pdf-jian-suo/openai-embeddings-xiang-liang-hua.md)
 * [结合语音输入实现对话](practice/jie-he-yu-yin-shu-ru-shi-xian-dui-hua.md)
 * [OpenAI Function Calling的使用](practice/openai-function-calling-de-shi-yong.md)
