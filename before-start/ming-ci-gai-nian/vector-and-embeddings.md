@@ -39,7 +39,7 @@ _**vector = \[0,-2,...4]**_
 
 一旦训练完成，嵌入模型可以将我们的原始数据转换为向量embedding。这意味着它知道如何将新的数据点放置在向量空间中。
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 这种embedding使得可以比较单词之间的相似性，且具有逻辑意义 - 如同义词出现在一起，不同义词分开。通过这种方法，嵌入模型学习了数据之间的隐含关系，并将其反映在向量空间之中。这正是保留原始数据含义的关键。
 
