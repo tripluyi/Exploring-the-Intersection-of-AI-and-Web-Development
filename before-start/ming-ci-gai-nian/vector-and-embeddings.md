@@ -92,7 +92,7 @@ export const cosineSimilarity = (a: number[], b: number[]): number => {
 
 ### 为什么更推荐使用 embeddings而不是 fine-tuning
 
-Openai CookBook中提到，更推荐使用使用 embeddings。这是因为embeddings具有zero-short的优势。
+Openai CookBook中提到，更推荐使用使用 embeddings。这是因为embeddings具有zero-shot[^1]的优势。
 
 GPT有两种方式学习知识:
 
@@ -133,3 +133,10 @@ Reference
 [Question answering using embeddings - OpenAI Cookbook](https://github.com/openai/openai-cookbook/blob/main/examples/Question\_answering\_using\_embeddings.ipynb)
 {% endhint %}
 
+
+
+[^1]: Zero-shot（零样本）是指模型能够在没有经过特定任务的训练数据的情况下，对该任务进行推理或执行。这意味着，即使模型从未见过某个特定的任务或领域，它也可以通过利用其对其他相关任务或领域的学习，来完成新任务或领域的处理。
+
+    例如，在自然语言处理中，Zero-shot能力可以用来解决新词汇的问题。假设我们的模型在训练时没有见过“COVID-19”这个词汇，但是它可以通过了解相关的知识，比如“冠状病毒”、“病毒传播”等，来理解并在相关上下文中正确地使用这个词汇。
+
+    Zero-shot能力是一种非常有用的技术，因为它可以提高模型的泛化能力，使其能够更好地适应各种不同的任务和场景，而不需要进行大量的任务特定训练。

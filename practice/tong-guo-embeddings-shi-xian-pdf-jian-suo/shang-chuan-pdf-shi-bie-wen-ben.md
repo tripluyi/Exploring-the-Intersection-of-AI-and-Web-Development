@@ -44,17 +44,20 @@ export default PdfWorker
 
 先引入 react-pdf，并且指定 pdfworker.js
 
+{% code title="客户端" %}
 ```tsx
 import { Document, Page, pdfjs } from 'react-pdf' //'react-pdf'
 
 // 设置 PDF.js 的 workerSrc
 pdfjs.GlobalWorkerOptions.workerSrc = '/api/pdf.worker'
 ```
+{% endcode %}
 
 这里Document 为上传PDF的主体，Page为每一页。
 
 
 
+{% code title="客户端" %}
 ```tsx
 const PdfReader = ({
     file,
@@ -115,6 +118,7 @@ const PdfReader = ({
 }
 
 ```
+{% endcode %}
 
 
 
