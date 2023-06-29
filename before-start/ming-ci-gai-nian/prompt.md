@@ -6,7 +6,15 @@ Prompt是整个 AI 中至关重要的一部分。有时候对话获取的结果�
 
 ### 邪恶Prompt
 
-有趣的是，虽然ai在回答的时候会屏蔽一些negative word，但和前端入侵类似，有一些prompt可以突破这些限制。
+有趣的是，虽然ai在回答的时候会屏蔽一些negative word，但和前端入侵类似，有一些prompt可以突破这些限制。在正常情况下，ai不会表露出负面的情绪，
+
+<figure><img src="../../.gitbook/assets/截屏2023-06-29 下午12.52.23.png" alt=""><figcaption></figcaption></figure>
+
+假如使用特定的“咒语”让他无所顾忌，啧啧
+
+<figure><img src="../../.gitbook/assets/截屏2023-06-29 下午12.54.50.png" alt=""><figcaption></figcaption></figure>
+
+
 
 
 
@@ -26,6 +34,8 @@ Prompt是整个 AI 中至关重要的一部分。有时候对话获取的结果�
 
 {% hint style="info" %}
 Reference
+
+[Jailbreak Chat](https://www.jailbreakchat.com/)
 
 
 {% endhint %}
