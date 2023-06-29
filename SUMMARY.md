@@ -23,3 +23,7 @@
   * [Openai Embeddings 向量化及存储](practice/tong-guo-embeddings-shi-xian-pdf-jian-suo/openai-embeddings-xiang-liang-hua-ji-cun-chu.md)
 * [结合语音输入实现对话](practice/jie-he-yu-yin-shu-ru-shi-xian-dui-hua.md)
 * [OpenAI Function Calling的使用](practice/openai-function-calling-de-shi-yong.md)
+
+## Others
+
+* [Framework and SDK](others/framework-and-sdk.md)
