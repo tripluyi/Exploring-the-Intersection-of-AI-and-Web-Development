@@ -11,7 +11,7 @@
   * [Temperature](before-start/ming-ci-gai-nian/temperature.md)
   * [Top\_p](before-start/ming-ci-gai-nian/top\_p.md)
   * [Vector & Embeddings](before-start/ming-ci-gai-nian/vector-and-embeddings.md)
-  * [CoT](before-start/ming-ci-gai-nian/cot.md)
+  * [CoT and ReAct](before-start/ming-ci-gai-nian/cot-and-react.md)
 
 ## Practice
 

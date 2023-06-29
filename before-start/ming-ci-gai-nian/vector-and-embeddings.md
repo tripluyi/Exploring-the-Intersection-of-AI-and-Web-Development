@@ -29,17 +29,17 @@ _**vector = \[0,-2,...4]**_
 
 当我们查看同一空间中的许多向量时，我们可以说某些向量彼此近在咫尺，而其他向量相距甚远。 一些向量似乎会聚集在一起,而另一些向量可能在空间中分布稀疏。
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 
 
 通过一个可视化的三维的Embeddings，来理解嵌入模型的工作原理。这里中标出了多个数据点，每个点代表一个单词的向量embedding。距离近的单词在语义上相似，而距离远的单词语义不同。
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 一旦训练完成，嵌入模型可以将我们的原始数据转换为向量embedding。这意味着它知道如何将新的数据点放置在向量空间中。
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 这种embedding使得可以比较单词之间的相似性，且具有逻辑意义 - 如同义词出现在一起，不同义词分开。通过这种方法，嵌入模型学习了数据之间的隐含关系，并将其反映在向量空间之中。这正是保留原始数据含义的关键。
 
