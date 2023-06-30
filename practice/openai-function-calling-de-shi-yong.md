@@ -6,7 +6,7 @@
 
 当我们询问AI现在几点时，他会回答无法获取当前时间：
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 由于没有联网它无法获取当前正确的时间，现在我们可以通过prompt + function calling 让它实现这个功能。
 
