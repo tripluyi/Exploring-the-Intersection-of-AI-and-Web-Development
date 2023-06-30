@@ -1,5 +1,16 @@
 ---
 description: Chain of Thought and ReAct
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # CoT and ReAct
@@ -16,7 +27,7 @@ ChatGPT的作者之一 Jason发表的一篇论文中讲述了什么是CoT：
 
 CoT的模式是，把人类思考的过程，用自然语言的形式，显性地放在prompt message中。
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 这样普通的 input prompt, output message 就被转化成 \
 input prmopt(include CoT) and output(include CoT) message
@@ -33,17 +44,21 @@ input prmopt(include CoT) and output(include CoT) message
 
 在另一篇 LLM are Zero-Shot Reasoners 论文中，作者小岛武简化了CoT的过程，也就是无需模型训练，通过特定的prmopt让模型自动生成CoT的方式来加强AI的回答(zero-shot CoT)
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>compare with Few-shot, Zero-shot, Few-shot-CoT and Zero-shot-CoT</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>compare with Few-shot, Zero-shot, Few-shot-CoT and Zero-shot-CoT</p></figcaption></figure>
 
-他就使用了很简单的一句话：_**"Let's think step by step",**_ 就可以让没有CoT思维的模型进化回答。
+他通过在中间过程中加了很简单的一句话：_**"Let's think step by step",**_  就可以让没有CoT思维的模型进化回答。
 
 > _We propose Zero-shot-CoT, a zero-shot template-based prompting for chain of thought reasoning. It differs from the original chain of thought prompting \[Wei et al., 2022] as it does not require step-by-step few-shot examples, and it differs from most of the prior template prompting \[Liu et al., 2021b] as it is inherently task-agnostic and elicits multi-hop reasoning across a wide range of tasks with a single template. The core idea of our method is simple, as described in Figure 1: add **Let’s think step by step**, or a a similar text (see Table 4), to extract step-by-step reasoning._
 
+那么这是怎么实现的呢？  Zero-shot CoT的操作这样的：
 
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>Zero-shot CoT</p></figcaption></figure>
 
+它通过两次prompt来实现。第一个通过 _**“Let’s think step by step”**_, 让模型进行思考；第二次将思考的过程联合第一次的问题，加上prmopt: "_**The answer is**_" 一起提交，得到最终正确答案。
 
+当然我们在开发中也可以这么实现，隐式地将这两步变一步，可以获得更精准的回答。
 
-
+### ReAct
 
 
 

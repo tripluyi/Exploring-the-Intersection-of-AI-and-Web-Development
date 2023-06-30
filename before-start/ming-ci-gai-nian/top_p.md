@@ -9,7 +9,7 @@
 > \
 > 假设 p=0.92，_Top-p_ 采样对单词概率进行降序排列并累加，然后选择概率和首次超过 p=92% 的单词集作为采样池，定义为 _V top-p_。在 第一个示例中_V top-p_ ​有 9 个词，而在第二个示例它只需要选择前 3 个词就超过了 92%。其实很简单吧！可以看出，在单词比较不可预测时，它保留了更多的候选词，_如_ _P(w∣"The”)_，而当单词似乎更容易预测时，只保留了几个候选词，_如_ _P(w∣"The","car")_。
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 
 
