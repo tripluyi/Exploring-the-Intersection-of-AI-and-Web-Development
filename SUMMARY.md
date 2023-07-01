@@ -9,7 +9,7 @@
   * [Token](before-start/ming-ci-gai-nian/token.md)
   * [Prompt](before-start/ming-ci-gai-nian/prompt.md)
   * [Temperature](before-start/ming-ci-gai-nian/temperature.md)
-  * [Top\_p](before-start/ming-ci-gai-nian/top\_p.md)
+  * [Top K and Top P](before-start/ming-ci-gai-nian/top-k-and-top-p.md)
   * [Vector & Embeddings](before-start/ming-ci-gai-nian/vector-and-embeddings.md)
 * [CoT and ReAct](before-start/cot-and-react.md)
 
