@@ -14,6 +14,15 @@ Prompt是整个 AI 中至关重要的一部分。有时候对话获取的结果�
 
 <figure><img src="../../.gitbook/assets/截屏2023-06-29 下午12.54.50.png" alt=""><figcaption></figcaption></figure>
 
+### 万能Prompt
+
+很多时候自己并不知道该怎么问，可能只是一个主题，或者是一个宽泛的概念，你想要寻求ai的回答，但如果只问一个主题，它的回答可能就天马行空。这里其实有一个万能Prompt，它的作用是让ai帮助你完善你的提问。
+
+```typescript
+// share later
+
+```
+
 
 
 
@@ -22,7 +31,7 @@ Prompt是整个 AI 中至关重要的一部分。有时候对话获取的结果�
 
 <div>
 
-<figure><img src="../../.gitbook/assets/grandma_command_02 (1).jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/grandma_command_02.jpg" alt=""><figcaption></figcaption></figure>
 
  
 
