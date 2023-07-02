@@ -21,7 +21,7 @@ layout:
 
 第二次修改prompt，让GPT先尝试根据提问自己计算一遍，再通过计算的结果和学生的答案做对比，这样就可以得出正确的判断。
 
-<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 这其实就是让GPT思考的一种方式。那么我们来更详细地说一下什么是Chain of Thought 和 ReAct思维，进一步了解AI及大模型的处理方式，方便在开发过程中达到更好的效果。
 
@@ -35,7 +35,7 @@ ChatGPT的作者之一 Jason发表的一篇论文中讲述了什么是CoT：
 
 CoT的模式是，把人类思考的过程，用自然语言的形式，显性地放在prompt message中。
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 这样普通的 _input prompt, output message_ 就被转化成 \
 _input prmopt(include CoT) and output(include CoT) message_
@@ -52,7 +52,7 @@ _input prmopt(include CoT) and output(include CoT) message_
 
 在另一篇 LLM are Zero-Shot Reasoners 论文中，作者小岛武简化了CoT的过程，也就是无需模型训练，通过特定的prmopt让模型自动生成CoT的方式来加强AI的回答(zero-shot CoT)
 
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption><p>compare with Few-shot, Zero-shot, Few-shot-CoT and Zero-shot-CoT</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption><p>compare with Few-shot, Zero-shot, Few-shot-CoT and Zero-shot-CoT</p></figcaption></figure>
 
 他通过在中间过程中加了很简单的一句话：_**"Let's think step by step",**_  就可以让没有CoT思维的模型进化回答。
 
@@ -60,7 +60,7 @@ _input prmopt(include CoT) and output(include CoT) message_
 
 那么这是怎么实现的呢？  Zero-shot CoT的操作这样的：
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p>Zero-shot CoT</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>Zero-shot CoT</p></figcaption></figure>
 
 它通过两次prompt来实现。第一个通过 _**“Let’s think step by step”**_, 让模型进行思考；第二次将思考的过程联合第一次的问题，加上prmopt: "_**The answer is**_" 一起提交，得到最终正确答案。
 
@@ -72,7 +72,7 @@ _input prmopt(include CoT) and output(include CoT) message_
 
 ReAat表示的是Reason+Act，通过这个例子我们可以看出几种模式的区别。
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Standard, Reason only, Act Only, ReActR</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Standard, Reason only, Act Only, ReActR</p></figcaption></figure>
 
 在这个例子中，用户提问的是，除了Apple Remote，还有别的什么设备可以控制Apple Remote用来交互的那个程序吗？
 
@@ -100,7 +100,7 @@ _“Keyboard function keys”_
 
 AutoGPT看上去也是通过step by step来完成任务，但实际是否符合CoT的理念呢。推主Sverige对AutoGPT的源码进行了解读。
 
-<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption><p>AutoGPT</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>AutoGPT</p></figcaption></figure>
 
 
 

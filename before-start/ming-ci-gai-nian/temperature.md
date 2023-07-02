@@ -6,7 +6,7 @@
 
 如果temperature非常低，最高的概率得分会被乘以一个非常大的数，这会使得最高得分的Token有更大的被选中的概率，也就是说，模型的行为会更加确定。
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>The garden was full of beautiful</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption><p>The garden was full of beautiful</p></figcaption></figure>
 
 
 
