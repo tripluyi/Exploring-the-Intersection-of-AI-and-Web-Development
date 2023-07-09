@@ -21,7 +21,8 @@
   * [获取文本，按句整理](practice/tong-guo-embeddings-shi-xian-pdf-jian-suo/huo-qu-wen-ben-an-ju-zheng-li.md)
   * [上传并按限定长度分割Documents](practice/tong-guo-embeddings-shi-xian-pdf-jian-suo/shang-chuan-bing-an-xian-ding-chang-du-fen-ge-documents.md)
   * [Openai Embeddings 向量化及存储](practice/tong-guo-embeddings-shi-xian-pdf-jian-suo/openai-embeddings-xiang-liang-hua-ji-cun-chu.md)
-* [结合语音输入实现对话](practice/jie-he-yu-yin-shu-ru-shi-xian-dui-hua.md)
+* [结合语音输入实现对话](practice/jie-he-yu-yin-shu-ru-shi-xian-dui-hua/README.md)
+  * [通过麦克风识别语音输入](practice/jie-he-yu-yin-shu-ru-shi-xian-dui-hua/tong-guo-mai-ke-feng-shi-bie-yu-yin-shu-ru.md)
 * [Chrome侧边栏对话插件](practice/chrome-ce-bian-lan-dui-hua-cha-jian.md)
 * [OpenAI Function Calling的使用](practice/openai-function-calling-de-shi-yong.md)
 
