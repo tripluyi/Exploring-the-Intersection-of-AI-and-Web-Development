@@ -36,6 +36,8 @@ API申请地址：[https://www.anthropic.com/earlyaccess](https://www.anthropic.
 
 缺点：目前申请需要等待时间较长
 
+Anthropic目前发布了Claude 2，支持200k长文输入，支持上传文件：[https://claude.ai/](https://claude.ai/)
+
 
 
 ### Google PaLM
