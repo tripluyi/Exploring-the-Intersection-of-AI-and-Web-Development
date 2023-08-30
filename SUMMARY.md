@@ -26,6 +26,7 @@
   * [Memory Chat & Conversation](practice/jie-he-yu-yin-shu-ru-shi-xian-dui-hua/memory-chat-and-conversation.md)
 * [Chrome侧边栏对话插件](practice/chrome-ce-bian-lan-dui-hua-cha-jian.md)
 * [OpenAI Function Calling的使用](practice/openai-function-calling-de-shi-yong.md)
+* [SSE流式对话](practice/sse-liu-shi-dui-hua.md)
 
 ## Others
 
