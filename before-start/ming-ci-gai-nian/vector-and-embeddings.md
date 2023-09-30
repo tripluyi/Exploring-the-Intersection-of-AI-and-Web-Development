@@ -132,7 +132,7 @@ Reference
 
 [Vector Embeddings for Developers](https://www.pinecone.io/learn/vector-embeddings-for-developers/)
 
-[What is a Vector Database?](http://localhost:5000/s/aC0LjN8LnoW1EQtmZMbv/about-us/vision-mission-and-focus/vision)
+[What is a Vector Database?](http://127.0.0.1:5000/s/aC0LjN8LnoW1EQtmZMbv/about-us/vision-mission-and-focus/vision)
 
 [Cosine Similarity - Wikipedia](https://en.wikipedia.org/wiki/Cosine\_similarity)
 

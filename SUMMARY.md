@@ -16,6 +16,9 @@
 ## Practice
 
 * [发起一次提问和对话](practice/fa-qi-yi-ci-ti-wen-he-dui-hua.md)
+* [Server-Sent Events流式对话](practice/serversent-events-liu-shi-dui-hua/README.md)
+  * [客户端调用](practice/serversent-events-liu-shi-dui-hua/ke-hu-duan-tiao-yong.md)
+  * [服务端处理](practice/serversent-events-liu-shi-dui-hua/fu-wu-duan-chu-li.md)
 * [通过Embeddings实现PDF检索](practice/tong-guo-embeddings-shi-xian-pdf-jian-suo/README.md)
   * [上传识别PDF](practice/tong-guo-embeddings-shi-xian-pdf-jian-suo/shang-chuan-shi-bie-pdf.md)
   * [获取文本，按句整理](practice/tong-guo-embeddings-shi-xian-pdf-jian-suo/huo-qu-wen-ben-an-ju-zheng-li.md)
@@ -26,7 +29,6 @@
   * [Memory Chat & Conversation](practice/jie-he-yu-yin-shu-ru-shi-xian-dui-hua/memory-chat-and-conversation.md)
 * [Chrome侧边栏对话插件](practice/chrome-ce-bian-lan-dui-hua-cha-jian.md)
 * [OpenAI Function Calling的使用](practice/openai-function-calling-de-shi-yong.md)
-* [SSE流式对话](practice/sse-liu-shi-dui-hua.md)
 
 ## Others
 
