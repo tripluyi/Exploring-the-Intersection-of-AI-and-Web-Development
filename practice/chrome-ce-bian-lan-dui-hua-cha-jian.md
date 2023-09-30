@@ -4,9 +4,7 @@
 
 {% tabs %}
 {% tab title="From Bilibili" %}
-{% embed url="https://www.bilibili.com/video/BV1DM4y177SD" %}
-A Chrome Sidebar Extension "Tour-Chat"
-{% endembed %}
+{% embed url="https://www.bilibili.com/video/BV1DM4y177SD/?a=1" %}
 {% endtab %}
 
 {% tab title="From Youtube" %}
