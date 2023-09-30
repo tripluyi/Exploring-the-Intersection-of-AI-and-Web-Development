@@ -13,5 +13,5 @@ coverY: -229
 
 **在此文档中的代码示例，除非指明为客户端，否则一律为 NodeJS 环境**
 
-**代码示例将可以在** [**aiweb-starter**](https://github.com/tripluyi/aiweb-starter) **中找到(**TODO**)，欢迎至**[<mark style="color:blue;">**讨论区**</mark>](https://github.com/tripluyi/aiweb-starter/discussions)**留言**
+**代码示例将可以在** [**aiweb-starter**](https://github.com/tripluyi/aiweb-starter) **中找到，欢迎至**[<mark style="color:blue;">**讨论区**</mark>](https://github.com/tripluyi/aiweb-starter/discussions)**留言**
 
