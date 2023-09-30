@@ -1,12 +1,8 @@
-# OpenAI Function Calling的使用
-
-目前OpenAI在最新 gpt-3.5-turbo-0613 和 gpt-4-0613`两个模型版本中`提供了 function calling的功能。我们可以看一个实际的例子来更直观地知晓它的作用。
-
-
+# 获取当前时间 - function calling
 
 当我们询问AI现在几点时，他会回答无法获取当前时间：
 
-<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 由于没有联网它无法获取当前正确的时间，现在我们可以通过prompt + function calling 让它实现这个功能。
 
