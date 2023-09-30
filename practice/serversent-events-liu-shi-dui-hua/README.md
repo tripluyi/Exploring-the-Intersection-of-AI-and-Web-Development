@@ -20,7 +20,7 @@ SSE的工作原理：
 
 {% tabs %}
 {% tab title="From Bilibili" %}
-{% embed url="https://www.bilibili.com/video/BV1134y1G77d/" %}
+{% embed url="https://www.bilibili.com/video/BV1134y1G77d" %}
 {% endtab %}
 
 {% tab title="From Youtube " %}
